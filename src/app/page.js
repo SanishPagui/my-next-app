@@ -27,12 +27,10 @@ const page = () => {
     }
   })
   return (
-    <div id='smooth-wrapper' className='bg-black h-screen'>
-      <div id='smooth-content'>
+    <div id='smooth-wrapper' className='bg-black h-screen w-full'>
         <MenuComponent/>
         <Hero/>
         <AfterHero/>
-      </div>
     </div>
   )
 }
