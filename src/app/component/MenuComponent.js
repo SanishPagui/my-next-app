@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
+import page from '../page';
 
 const MenuComponent = () => {
   const [menuOpen,set]=useState(false)
@@ -27,7 +28,8 @@ const MenuComponent = () => {
     <div className='fixed opacity-100 w-full h-[10vh] z-[999] flex pr-4' >
       <div className='fixed bg-black z-[998] h-[13vh] w-full opacity-70'></div>
       <div className=' w-full h-[13vh] flex items-center p-6 z-[999]'>
-        <div
+        <Link 
+          href={"/"}
           // ref={text}
           // style={{
           //   fontWeight:'bold',
@@ -38,7 +40,7 @@ const MenuComponent = () => {
           //   color:'transparent',
           // }}
           className='text-2xl z-[999] text-white'
-        >FLOWLINE</div>
+        >FLOWLINE</Link>
       </div>
       <div onClick={toggleMenu} className="z-[999] mt-[2.2vw] cursor-pointer pr-3  w-[13%] h-[100%] flex flex-col justify-center items-center md:hidden">
         <div className={` w-8 h-0.5 bg-white my-1 duration-700 transform ${menuOpen?"rotate-[45deg] translate-y-0.5":"translate-y-0"}`}></div>
@@ -59,8 +61,7 @@ const MenuComponent = () => {
           <Link href="#" className='h-fit basis-[45.5%]  items-center flex justify-center border rounded-lg p-3 mt-4'>Ambassadors</Link>
           <Link href="#" className='h-fit basis-[45.5%]  items-center flex justify-center border rounded-lg p-3 mt-4 ml-4'>About Us</Link>
           <Link href="#" className='h-fit basis-[45.5%]  items-center flex justify-center border rounded-lg p-3 mt-4'>Contact</Link>
-          <div className=' h-fit w-full basis-[45.5%] p-3 flex items-center justify-center mt-4 ml-4'>
-            
+          <div className=' h-fit w-full basis-[45.5%] p-3 flex items-center justify-center mt-4 ml-4'>         
           </div>
         </div>
       </div>
